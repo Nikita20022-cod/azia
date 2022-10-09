@@ -1,0 +1,47 @@
+<div class="modal modal-right" data-modal="1">
+    <div class="modal__close">
+        <svg class="icon modal__cross js-modal-close">
+            <use xlink:href="img/icons/icons.svg#close-icon"></use>
+        </svg>
+    </div>
+    <div class="modal__wrapper modal-contact modal-start">
+        <h2 class="title">
+            обратный звонок
+        </h2>
+        <p class="modal__fill">
+            Заполните форму и наш менеджер скоро свяжется с вами
+        </p>
+        <div class="form">
+            <div class="block-name">
+                <input type="text" placeholder="Имя" class="form__name">
+                <p class="text-error">Поле обязательно к заполнению</p>
+            </div>
+            <div class="block-tel">
+                <input type="tel" placeholder="Телефон" class="form__tel">
+                <p class="text-error">Введите номер телефона</p>
+            </div>
+            <button class="main-btn form__btn">Отправить</button>
+            <div class="form__acceptance flex cv">
+                <label class="chek-container">
+                    <input type="checkbox" class="form__chekbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p>
+                    Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения.</a>
+                </p>
+                <p class="text-error">Поле обязательно к заполнению</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal__wrapper modal-contact modal-thx">
+        <div class="center">
+            <h2 class="title">
+                Спасибо!
+            </h2>
+            <p>
+                Наш менеджер скоро свяжется с вами
+            </p>
+        </div>
+        <button class="main-btn js-modal-close">Хорошо</button>
+    </div>
+</div>

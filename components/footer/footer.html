@@ -5,13 +5,13 @@
                 <div class="footer__tel">
                     <a href="tel:+74993940379">+7 (499) 394-03-79</a>
                 </div>
-                <a href="#" class="footer__address">
+                <div class="footer__address">
                     г. Москва, ул. Новопесчаная, д. 23, корп.4
-                </a>
+                </div>
                 <div class="footer__mail">
                     <a href="mailto:lvin-art@mail.ru">lvin-art@mail.ru</a>
                 </div>
-                <div class="footer__icon">
+                <div class="footer__icon block-icon">
                     <a href="#" class="flex-cc">
                         <svg class="icon">
                             <use xlink:href="img/icons/icons.svg#social-tel"></use>
@@ -64,7 +64,7 @@
     </svg>
 </div>
 
-<div class="modal modal-right" data-modal="1">
+<div class="modal modal-right modal-call modal-connection" data-modal="1">
     <div class="modal__close">
         <svg class="icon modal__cross js-modal-close">
             <use xlink:href="img/icons/icons.svg#close-icon"></use>
@@ -86,16 +86,78 @@
                 <input type="tel" placeholder="Телефон" class="form__tel">
                 <p class="text-error">Введите номер телефона</p>
             </div>
-            <button class="main-btn form__btn">Отправить</button>
-            <div class="form__acceptance flex cv">
-                <label class="chek-container">
-                    <input type="checkbox" class="form__chekbox">
-                    <span class="checkmark"></span>
-                </label>
-                <p>
-                    Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения.</a>
-                </p>
+            <div class="form__send">
+                <button class="main-btn form__btn">Отправить</button>
+                <div class="form__acceptance flex cv">
+                    <label class="chek-container">
+                        <input type="checkbox" class="form__chekbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>
+                        Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения.</a>
+                    </p>
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal__wrapper modal-contact modal-thx">
+        <div class="center">
+            <h2 class="title">
+                Спасибо!
+            </h2>
+            <p>
+                Наш менеджер скоро свяжется с вами
+            </p>
+        </div>
+        <button class="main-btn js-modal-close">Хорошо</button>
+    </div>
+</div>
+<div class="modal modal-right modal-order modal-connection" data-modal="5">
+    <div class="modal__close">
+        <svg class="icon modal__cross js-modal-close">
+            <use xlink:href="img/icons/icons.svg#close-icon"></use>
+        </svg>
+    </div>
+    <div class="modal__wrapper modal-contact modal-start">
+        <h2 class="title">
+            заказать
+        </h2>
+        <div class="modal-order__product flex cv">
+            <div class="modal-order__img">
+                <picture><source srcset="img/goods/goods12.webp" type="image/webp"><img class="cart__img-item" src="img/goods/goods12.png" alt="img"></picture>
+            </div>
+            <p class="modal-order__text">
+                Браслет с вставками из стекла и дерева
+            </p>
+        </div>
+        <p class="modal__fill">
+            Заполните форму и наш менеджер скоро свяжется с вами
+        </p>
+        <div class="form">
+            <div class="block-name">
+                <input type="text" placeholder="Имя" class="form__name">
                 <p class="text-error">Поле обязательно к заполнению</p>
+            </div>
+            <div class="block-tel">
+                <input type="tel" placeholder="Телефон" class="form__tel">
+                <p class="text-error">Введите номер телефона</p>
+            </div>
+            <div class="block-name">
+                <input type="text" placeholder="Комментарий" class="form__name">
+            </div>
+            <div class="form__send">
+                <button class="main-btn form__btn">Отправить</button>
+                <div class="form__acceptance flex cv">
+                    <label class="chek-container">
+                        <input type="checkbox" class="form__chekbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>
+                        Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения.</a>
+                    </p>
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
             </div>
         </div>
     </div>
@@ -130,11 +192,12 @@
             </a>
         </div>
         <div class="header__menu-center">
-            <div class="header__menu-btn" data-simplebar>
+            <div class="header__menu-btn">
                 <div class="header__menu-item">
-                    <p class="header__menu-back back-oneLevel">Назад</p>
-                    <p class="title">Каталог</p>
-                    <ul class="header__menu-product">
+                    <button class="header__menu-back back-oneLevel">Назад</button>
+                    <h2 class="title header__menu-title">Каталог</h2>
+                    <ul class="header__menu-product" data-simplebar>
+                        <h2 class="title">Каталог</h2>
                         <li class="header__menu-li">
                             <div class="header__menu-info flex cv sb">
                                 <p>Мебель</p>
@@ -143,23 +206,25 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Мебель</p>
-                                <a href="#">Двери, порталы, паркет</a>
-                                <a href="#">Диваны, скамейки, банкетки</a>
-                                <a href="#">Качели, качалки</a>
-                                <a href="#">Комоды, тумбы под TV</a>
-                                <a href="#">Кресла</a>
-                                <a href="#">Кровати</a>
-                                <a href="#">Подставки, колонны, кронштейны</a>
-                                <a href="#">Полки настенные, напольные</a>
-                                <a href="#">Столы, консоли</a>
-                                <a href="#">Стулья</a>
-                                <a href="#">Сундуки</a>
-                                <a href="#">Табуреты</a>
-                                <a href="#">Тумбочки</a>
-                                <a href="#">Ширмы</a>
-                                <a href="#">Шкафы, стеллажи, этажерки</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Мебель</h2>
+                                    <a href="#">Двери, порталы, паркет</a>
+                                    <a href="#">Диваны, скамейки, банкетки</a>
+                                    <a href="#">Качели, качалки</a>
+                                    <a href="#">Комоды, тумбы под TV</a>
+                                    <a href="#">Кресла</a>
+                                    <a href="#">Кровати</a>
+                                    <a href="#">Подставки, колонны, кронштейны</a>
+                                    <a href="#">Полки настенные, напольные</a>
+                                    <a href="#">Столы, консоли</a>
+                                    <a href="#">Стулья</a>
+                                    <a href="#">Сундуки</a>
+                                    <a href="#">Табуреты</a>
+                                    <a href="#">Тумбочки</a>
+                                    <a href="#">Ширмы</a>
+                                    <a href="#">Шкафы, стеллажи, этажерки</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -170,13 +235,15 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Предметы интерьера</p>
-                                <a href="#">Мебель</a>
-                                <a href="#">Диваны</a>
-                                <a href="#">Лампы</a>
-                                <a href="#">Комоды</a>
-                                <a href="#">Кресла</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Предметы интерьера</h2>
+                                    <a href="#">Мебель</a>
+                                    <a href="#">Диваны</a>
+                                    <a href="#">Лампы</a>
+                                    <a href="#">Комоды</a>
+                                    <a href="#">Кресла</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -187,16 +254,18 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Шкатулки, сундучки</p>
-                                <a href="#">Тест 1</a>
-                                <a href="#">Тест 2</a>
-                                <a href="#">Тест 3</a>
-                                <a href="#">Тест 4</a>
-                                <a href="#">Тест 5</a>
-                                <a href="#">Тест 6</a>
-                                <a href="#">Тест 7</a>
-                                <a href="#">Тест 8</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Шкатулки, сундучки</h2>
+                                    <a href="#">Тест 1</a>
+                                    <a href="#">Тест 2</a>
+                                    <a href="#">Тест 3</a>
+                                    <a href="#">Тест 4</a>
+                                    <a href="#">Тест 5</a>
+                                    <a href="#">Тест 6</a>
+                                    <a href="#">Тест 7</a>
+                                    <a href="#">Тест 8</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -207,14 +276,16 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Текстиль</p>
-                                <a href="#">Тест 3</a>
-                                <a href="#">Тест 4</a>
-                                <a href="#">Тест 5</a>
-                                <a href="#">Тест 6</a>
-                                <a href="#">Тест 7</a>
-                                <a href="#">Тест 8</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Текстиль</h2>
+                                    <a href="#">Тест 3</a>
+                                    <a href="#">Тест 4</a>
+                                    <a href="#">Тест 5</a>
+                                    <a href="#">Тест 6</a>
+                                    <a href="#">Тест 7</a>
+                                    <a href="#">Тест 8</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -225,19 +296,21 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Бижутерия</p>
-                                <a href="#">Тест 1</a>
-                                <a href="#">Тест 2</a>
-                                <a href="#">Тест 3</a>
-                                <a href="#">Тест 4</a>
-                                <a href="#">Тест 5</a>
-                                <a href="#">Тест 6</a>
-                                <a href="#">Тест 7</a>
-                                <a href="#">Тест 8</a>
-                                <a href="#">Тест 9</a>
-                                <a href="#">Тест 10</a>
-                                <a href="#">Тест 11</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Бижутерия</h2>
+                                    <a href="#">Тест 1</a>
+                                    <a href="#">Тест 2</a>
+                                    <a href="#">Тест 3</a>
+                                    <a href="#">Тест 4</a>
+                                    <a href="#">Тест 5</a>
+                                    <a href="#">Тест 6</a>
+                                    <a href="#">Тест 7</a>
+                                    <a href="#">Тест 8</a>
+                                    <a href="#">Тест 9</a>
+                                    <a href="#">Тест 10</a>
+                                    <a href="#">Тест 11</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -248,17 +321,19 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Свет</p>
-                                <a href="#">Тест 1</a>
-                                <a href="#">Тест 2</a>
-                                <a href="#">Тест 3</a>
-                                <a href="#">Тест 4</a>
-                                <a href="#">Тест 5</a>
-                                <a href="#">Тест 6</a>
-                                <a href="#">Тест 7</a>
-                                <a href="#">Тест 8</a>
-                                <a href="#">Тест 9</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Свет</h2>
+                                    <a href="#">Тест 1</a>
+                                    <a href="#">Тест 2</a>
+                                    <a href="#">Тест 3</a>
+                                    <a href="#">Тест 4</a>
+                                    <a href="#">Тест 5</a>
+                                    <a href="#">Тест 6</a>
+                                    <a href="#">Тест 7</a>
+                                    <a href="#">Тест 8</a>
+                                    <a href="#">Тест 9</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -269,15 +344,17 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Женские сумочки</p>
-                                <a href="#">Тест 1</a>
-                                <a href="#">Тест 2</a>
-                                <a href="#">Тест 3</a>
-                                <a href="#">Тест 4</a>
-                                <a href="#">Тест 5</a>
-                                <a href="#">Тест 7</a>
-                                <a href="#">Тест 8</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Женские сумочки</h2>
+                                    <a href="#">Тест 1</a>
+                                    <a href="#">Тест 2</a>
+                                    <a href="#">Тест 3</a>
+                                    <a href="#">Тест 4</a>
+                                    <a href="#">Тест 5</a>
+                                    <a href="#">Тест 7</a>
+                                    <a href="#">Тест 8</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -288,16 +365,18 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Изделия из мрамора и натурального камня</p>
-                                <a href="#">Тест 1</a>
-                                <a href="#">Тест 2</a>
-                                <a href="#">Тест 3</a>
-                                <a href="#">Тест 4</a>
-                                <a href="#">Тест 5</a>
-                                <a href="#">Тест 6</a>
-                                <a href="#">Тест 7</a>
-                                <a href="#">Тест 8</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Изделия из мрамора и натурального камня</h2>
+                                    <a href="#">Тест 1</a>
+                                    <a href="#">Тест 2</a>
+                                    <a href="#">Тест 3</a>
+                                    <a href="#">Тест 4</a>
+                                    <a href="#">Тест 5</a>
+                                    <a href="#">Тест 6</a>
+                                    <a href="#">Тест 7</a>
+                                    <a href="#">Тест 8</a>
+                                </div>
                             </div>
                         </li>
                         <li class="header__menu-li">
@@ -308,11 +387,13 @@
                                 </svg>
                             </div>
                             <div class="header__li-wrapper">
-                                <p class="header__menu-back back-twoLevel">Назад</p>
-                                <p class="title">Игрушки</p>
-                                <a href="#">Тест 1</a>
-                                <a href="#">Тест 2</a>
-                                <a href="#">Тест 3</a>
+                                <button class="header__menu-back back-twoLevel">Назад</button>
+                                <div class="header__li-init" data-simplebar>
+                                    <h2 class="title">Игрушки</h2>
+                                    <a href="#">Тест 1</a>
+                                    <a href="#">Тест 2</a>
+                                    <a href="#">Тест 3</a>
+                                </div>
                             </div>
                         </li>
                         <a href="#" class="header__menu-li">
@@ -341,12 +422,12 @@
         </div>
         <div class="header__menu-bottom flex sb">
             <div class="header__menu-social">
-                <a href="#" class="flex-cc">
+                <a href="#" class="flex-cc" rel="nofollow">
                     <svg class="icon">
                         <use xlink:href="img/icons/icons.svg#social-tel"></use>
                     </svg>
                 </a>
-                <a href="#" class="flex-cc">
+                <a href="#" class="flex-cc" rel="nofollow">
                     <svg class="icon">
                         <use xlink:href="img/icons/icons.svg#social-ws"></use>
                     </svg>
@@ -358,8 +439,746 @@
         </div>
     </div>
 </div>
+
+<div class="modal modal-right modal-price" data-modal="3">
+    <div class="modal__close">
+        <svg class="icon modal__cross js-modal-close">
+            <use xlink:href="img/icons/icons.svg#close-icon"></use>
+        </svg>
+    </div>
+    <div class="modal__wrapper modal-contact modal-start">
+       <p class="modal-price__quantity">
+            В избранном 5 товаров
+       </p>
+       <div class="modal-price__list" data-simplebar>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods1.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods1.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Металл
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods6.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods6.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Стол обеденный раздвижной
+                            </div>
+                            <div class="cart__material">
+                                Металл, дерево, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img//proposal/proposal-one.webp" type="image/webp"><img class="cart__img-item element-animation" src="img//proposal/proposal-one.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Статуэтка Корова
+                            </div>
+                            <div class="cart__material">
+                                Металл, дерево, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods14.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods14.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Металл, камень
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods15.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods15.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods16.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods16.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods17.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods17.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods18.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods18.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <button class="cart-buy">
+                            <svg class="icon icon-shop">
+                                <use xlink:href="img/icons/icons.svg#cart-buy"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="favourites-btn">
+        <button class="shop-btn favourites-btn__add">
+            Добавить всё в корзину
+        </button>
+        <button class="shop-btn favourites-btn__remove">
+            Очистить избранное
+        </button>
+    </div>
+</div>
+<div class="modal modal-right modal-price basket-modal" data-modal="4">
+    <div class="modal__close">
+        <svg class="icon modal__cross js-modal-close">
+            <use xlink:href="img/icons/icons.svg#close-icon"></use>
+        </svg>
+    </div>
+    <div class="modal__wrapper modal-contact modal-start">
+       <p class="modal-price__quantity">
+            5 товаров на 2 245 ₽
+       </p>
+       <div class="modal-price__list" data-simplebar>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods1.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods1.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Металл
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods6.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods6.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Стол обеденный раздвижной
+                            </div>
+                            <div class="cart__material">
+                                Металл, дерево, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img//proposal/proposal-one.webp" type="image/webp"><img class="cart__img-item element-animation" src="img//proposal/proposal-one.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Статуэтка Корова
+                            </div>
+                            <div class="cart__material">
+                                Металл, дерево, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods14.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods14.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Металл, камень
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods15.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods15.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods16.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods16.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods17.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods17.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart modal-price__cart">
+                <div class="modal-price__img">
+                    <picture><source srcset="img/goods/goods18.webp" type="image/webp"><img class="cart__img-item element-animation" src="img/goods/goods18.png" alt="img"></picture>
+                </div>
+                <div class="modal-price__info">
+                    <div class="modal-price__wrapper flex sb cv">
+                        <div class="modal-price__title">
+                            <div class="cart__name">
+                                Браслет
+                            </div>
+                            <div class="cart__material">
+                                Бронза, краска
+                            </div>
+                        </div>
+                        <button class="modal-price__delete">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/icons.svg#basket-del"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__wrapper">
+                        <div class="cart__price">145 000 ₽</div>
+                        <div class="quantity">
+                            <button class="quantity__del">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-del"></use>
+                                </svg>
+                            </button>
+                            <div class="quantity__number">
+                                1
+                            </div>
+                            <button class="quantity__add">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#quantity-add"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="favourites-btn basket go-arrange">
+        <div class="basket__wrapper">
+            <p class="basket__order">
+                Ваш заказ
+            </p>
+            <div class="basket__list">
+                <div class="basket__info flex cv sb">
+                    <p>
+                        Товары (5)
+                    </p>
+                    <p class="fw-600">
+                        12 299 ₽
+                    </p>
+                </div>
+                <div class="basket__info flex cv sb">
+                    <p>
+                        Скидка:
+                    </p>
+                    <p class="gray-main">
+                        -299 ₽
+                    </p>
+                </div>
+            </div>
+            <div class="basket__result flex cv sb">
+                <p>Итого:</p>
+                <p>2 245 ₽</p>
+            </div>
+        </div>
+        <button class="shop-btn">
+            Перейти к оформлению
+        </button>
+    </div>
+    <div class="basket-buy">
+        <p class="normal-title">
+            Оформление заказа
+        </p>
+        <div class="basket-buy__wrapper" data-simplebar>
+            <p class="basket-buy__text">
+                Получатель
+            </p>
+            <div class="basket-buy__recipient">
+                <div class="block-name">
+                    <input type="text" placeholder="ФИО*" class="basker-input necessarily">
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
+                <div class="block-name">
+                    <input type="tel" placeholder="Телефон*" class="basker-input form__tel necessarily">
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
+                <input type="email" placeholder="E-mail" class="basker-input">
+            </div>
+            <p class="basket-buy__text">
+                Адрес доставки
+            </p>
+            <div class="basket-buy__address">
+                <div class="block-name">
+                    <input type="text" placeholder="Город*" class="basker-input necessarily">
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
+                <div class="block-name">
+                    <input type="text" placeholder="Улица*" class="basker-input necessarily">
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
+                <div class="basket-buy__house">
+                    <input type="text" placeholder="Дом" class="basker-input">
+                    <input type="text" placeholder="Корпус" class="basker-input">
+                    <input type="text" placeholder="Квартира" class="basker-input">
+                </div>
+                <textarea placeholder="Комментарий к доставке"></textarea>
+            </div>
+            <div class="basket-buy__bottom">
+                <div class="basket__wrapper">
+                    <p class="basket__order">
+                        Ваш заказ
+                    </p>
+                    <div class="basket__list">
+                        <div class="basket__info flex cv sb">
+                            <p>
+                                Товары (5)
+                            </p>
+                            <p class="fw-600">
+                                12 299 ₽
+                            </p>
+                        </div>
+                        <div class="basket__info flex cv sb">
+                            <p>
+                                Доставка
+                            </p>
+                            <p class="fw-600">
+                                600 ₽
+                            </p>
+                        </div>
+                        <div class="basket__info flex cv sb">
+                            <p>
+                                Скидка:
+                            </p>
+                            <p class="gray-main">
+                                -299 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <div class="basket__result flex cv sb">
+                        <p>Итого:</p>
+                        <p>2 245 ₽</p>
+                    </div>
+                </div>
+                <button class="shop-btn go-buy">
+                    Оформить заказ
+                </button>
+                <div class="form__acceptance flex cv">
+                    <label class="chek-container">
+                        <input type="checkbox" class="form__chekbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>
+                        Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения.</a>
+                    </p>
+                    <p class="text-error">Поле обязательно к заполнению</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basket-thx">
+        <h2 class="normal-title">
+            Спасибо!
+        </h2>
+        <p class="gray-key">
+            Мы скоро свяжется с вами
+        </p>
+        <p>
+            Ваш заказ № 01452 от 01.01.2021 г.
+        </p>
+        <button class="shop-btn js-modal-close">
+            Хорошо
+        </button>
+    </div>
+</div>
+
+<div class="cookie">
+    <p>Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookie, которые обеспечивают правильную работу сайта.</p>
+    <button class="cookie__accept">Ок</button>
+</div>
  
 <!-- Подложка под модальным окном -->
 <div class="overlay js-overlay-modal"></div>
-<script src="js/app.min.js?_v=20221007181453"></script>
-<script src="script/form.js?_v=20221007181453"></script>
+<script src="js/app.min.js?_v=20221026181425"></script>
+<script src="js/form/form.js?_v=20221026181425"></script>

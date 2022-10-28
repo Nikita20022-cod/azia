@@ -1,4 +1,4 @@
-<div class="modal modal-right modal-call modal-connection" data-modal="1">
+<div class="modal modal-right modal-order modal-connection" data-modal="5">
     <div class="modal__close">
         <svg class="icon modal__cross js-modal-close">
             <use xlink:href="img/icons/icons.svg#close-icon"></use>
@@ -6,8 +6,16 @@
     </div>
     <div class="modal__wrapper modal-contact modal-start">
         <h2 class="title">
-            обратный звонок
+            заказать
         </h2>
+        <div class="modal-order__product flex cv">
+            <div class="modal-order__img">
+                <picture><source srcset="img/goods/goods12.webp" type="image/webp"><img class="cart__img-item" src="img/goods/goods12.png" alt="img"></picture>
+            </div>
+            <p class="modal-order__text">
+                Браслет с вставками из стекла и дерева
+            </p>
+        </div>
         <p class="modal__fill">
             Заполните форму и наш менеджер скоро свяжется с вами
         </p>
@@ -19,6 +27,9 @@
             <div class="block-tel">
                 <input type="tel" placeholder="Телефон" class="form__tel">
                 <p class="text-error">Введите номер телефона</p>
+            </div>
+            <div class="block-name">
+                <input type="text" placeholder="Комментарий" class="form__name">
             </div>
             <div class="form__send">
                 <button class="main-btn form__btn">Отправить</button>
